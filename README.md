@@ -5,7 +5,7 @@ This layer provides support for including TeamViewer IoT Agent in Yocto Linux pr
 
 This layer uses TeamViewer IoT Agent v2.8.
 
-Example on how the layer can be used is provided here (https://github.com/teamviewer/meta-teamviewer-iot-agent).
+Example on how the layer can be used is provided here https://community.teamviewer.com/t5/TeamViewer-IoT-Knowledge-Base/Building-a-Yocto-Image-for-Raspberry/ta-p/91297.
 
 Please see the corresponding sections below for details.
 
