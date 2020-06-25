@@ -4,12 +4,12 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://../LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
 SRC_URI += "file://LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
 
-TEAMVIEWER_IOT_AGENT_VERSION="2.8.18"
+TEAMVIEWER_IOT_AGENT_VERSION="2.10.18"
 SRC_URI += "https://download.teamviewer-iot.com/agents/${TEAMVIEWER_IOT_AGENT_VERSION}/armv7/teamviewer-iot-agent-armv7_${TEAMVIEWER_IOT_AGENT_VERSION}_armhf.deb"
-SRC_URI[md5sum] = "9c7eb4e8fb2b6286ab6d427c27948fd2"
-SRC_URI[sha256sum] = "76b2467abb670bfcbb4f45a9a1e092e5bf0a486dabb00257d6ee84be4bd54746"
+SRC_URI[md5sum] = "88215b31e9d26f8d5d9c1e9980ff219b"
+SRC_URI[sha256sum] = "f6a5374517a90fa3dd25728dbc57de7038651bc8461270d64041c105d325ab74"
 
-SRC_URI += "http://ftp.de.debian.org/debian/pool/main/d/dbus/libdbus-1-3_1.12.16-2_armhf.deb;md5sum=32fbba5e5571078171b815ff285ea0a2;sha256sum=e68cb7af028536db6149cd005c4178426a38fc6d0d707e299ea1251c86a5e141"
+SRC_URI += "http://ftp.de.debian.org/debian/pool/main/d/dbus/libdbus-1-3_1.12.16-1_armhf.deb;md5sum=7b822af2e5807a54230b84598191d0c4;sha256sum=65c877f0c7555c51ab32ad2f43a6c5d4b70fe1e3a4b87ef270ddf287d6fb4385"
 PRIVATE_LIBS_${PN} += " libdbus-1.so.3"
 
 RDEPENDS_${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'virtualization', ' docker-ce kernel-modules lsof', '', d)}"
