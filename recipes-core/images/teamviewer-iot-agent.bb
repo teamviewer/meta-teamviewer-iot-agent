@@ -9,7 +9,7 @@ SRC_URI += "https://download.teamviewer-iot.com/agents/${TEAMVIEWER_IOT_AGENT_VE
 SRC_URI[md5sum] = "88215b31e9d26f8d5d9c1e9980ff219b"
 SRC_URI[sha256sum] = "f6a5374517a90fa3dd25728dbc57de7038651bc8461270d64041c105d325ab74"
 
-SRC_URI += "http://ftp.de.debian.org/debian/pool/main/d/dbus/libdbus-1-3_1.12.16-1_armhf.deb;md5sum=7b822af2e5807a54230b84598191d0c4;sha256sum=65c877f0c7555c51ab32ad2f43a6c5d4b70fe1e3a4b87ef270ddf287d6fb4385"
+SRC_URI += "http://ftp.de.debian.org/debian/pool/main/d/dbus/libdbus-1-3_1.12.20-0+deb10u1_armhf.deb;md5sum=7a2ea0a2f824e0c177506eb70b60279e;sha256sum=3457e8bf06139c0892c78f4d727b39c3ee90f918b56a9eb765f07333c77b3cf0"
 PRIVATE_LIBS_${PN} += " libdbus-1.so.3"
 
 RDEPENDS_${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'virtualization', ' docker-ce kernel-modules lsof', '', d)}"
