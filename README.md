@@ -17,12 +17,12 @@ This layer depends on:
 
 ```
 URI: git://git.yoctoproject.org/meta-virtualization
-branch: zeus
+branch: dunfell
 ```
 
 ```
 URI: git://git.openembedded.org/meta-openembedded
-branch: zeus
+branch: dunfell
 ```
 
 Adding the meta-teamviewer-iot-agent layer to your build
