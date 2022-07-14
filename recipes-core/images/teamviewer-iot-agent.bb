@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://../LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
 SRC_URI += "file://LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
 
 TEAMVIEWER_IOT_AGENT_VERSION="2.10.18"
-SRC_URI += "https://download.teamviewer-iot.com/agents/${TEAMVIEWER_IOT_AGENT_VERSION}/armv7/teamviewer-iot-agent-armv7_${TEAMVIEWER_IOT_AGENT_VERSION}_armhf.deb"
+SRC_URI += "https://download-iot.teamviewer.com/agents/linux/${TEAMVIEWER_IOT_AGENT_VERSION}/armv7/teamviewer-iot-agent-armv7_${TEAMVIEWER_IOT_AGENT_VERSION}_armhf.deb"
 SRC_URI[md5sum] = "88215b31e9d26f8d5d9c1e9980ff219b"
 SRC_URI[sha256sum] = "f6a5374517a90fa3dd25728dbc57de7038651bc8461270d64041c105d325ab74"
 
