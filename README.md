@@ -3,9 +3,9 @@ meta-teamviewer-iot-agent
 
 This layer provides support for including TeamViewer IoT Agent in Yocto Linux projects.
 
-This layer uses TeamViewer IoT Agent v2.22.2.
+This layer uses TeamViewer IoT Agent v3.0.3.
 
-Example on how the layer can be used is provided here https://community.teamviewer.com/English/kb/articles/109799-set-up-a-yocto-image-for-raspberry.
+Example on how the layer can be used is provided here https://community.teamviewer.com/kb/articles/109799-set-up-a-yocto-image-for-raspberry
 
 Please see the corresponding sections below for details.
 
@@ -16,25 +16,35 @@ Dependencies
 This layer depends on:
 
 ```
-URI: git://git.yoctoproject.org/meta-virtualization
-branch: zeus
-```
-
-```
 URI: git://git.openembedded.org/meta-openembedded
-branch: zeus
+branch: kirkstone
 ```
 
-Adding the meta-teamviewer-iot-agent layer to your build
+Adding the meta-teamviewer-iot-agent layer and other dependencies to your build
 ========================================================
 
-Run `bitbake-layers add-layer meta-teamviewer-iot-agent`
+Run the following command to add the openembedded and teamviewer layers
+
+bitbake-layers add-layer meta-openembedded/meta-filesystems/ \
+	meta-openembedded/meta-oe/ \
+	meta-openembedded/meta-gnome/ \
+	meta-openembedded/meta-initramfs/ \
+	meta-openembedded/meta-multimedia/ \
+	meta-openembedded/meta-networking/ \
+	meta-openembedded/meta-perl/ \
+	meta-openembedded/meta-python/ \
+	meta-openembedded/meta-webserver/ \
+	meta-openembedded/meta-xfce/  \
+	meta-teamviewer-iot-agent
 
 Notes
 =====
 
-Add 'IMAGE_INSTALL_append += " teamviewer-iot-agent"' line in local.conf configuration file to append teamviewer-iot-agent layer to image.
+Add 'IMAGE_INSTALL:append = " teamviewer-iot-agent"' line in local.conf configuration file to append teamviewer-iot-agent layer to image.
 
-Add 'DISTRO_FEATURES_append += " X11"' line in local.conf configuration file for installation X11 dependencies.
+Add 'DISTRO_FEATURES:append = " X11"' line in local.conf configuration file for installation X11 dependencies.
 
-Add 'DISTRO_FEATURES_append += " virtualization"' line in local.conf configuration file for docker installation.
+Add 'VOLATILE_LOG_DIR = "no"' line in local.conf configuration file to make it possible for the agent to write logfiles. 
+
+Add 'IMAGE_ROOTFS_EXTRA_SPACE = "256000"' line in local.conf configuration file to make sure enough space is available on runtime for the agent
+
