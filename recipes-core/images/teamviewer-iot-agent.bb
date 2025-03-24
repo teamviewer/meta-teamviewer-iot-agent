@@ -23,14 +23,14 @@ RDEPENDS:${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'X11', ' xserver-xorg
 RDEPENDS:${PN} += "bash perl glibc glibc-utils procps curl ca-certificates"
 RRECOMMENDS:${PN} += "dbus libavahi-core libavahi-common libavahi-client"
 
-TEAMVIEWER_IOT_AGENT_VERSION="3.0.3"
+TEAMVIEWER_IOT_AGENT_VERSION="3.5.10"
 
 SRC_URI += "https://download-iot.teamviewer.com/agents/linux/${TEAMVIEWER_IOT_AGENT_VERSION}/armv7/teamviewer-iot-agent-armv7_${TEAMVIEWER_IOT_AGENT_VERSION}_armhf.deb"
-SRC_URI[md5sum] = "d6a958aa7acc451eb4872eaf01600cce"
-SRC_URI[sha1sum] = "cff3842ffb2b26fe873e86227ce6ae70e7dbca68"
-SRC_URI[sha256sum] = "e39aff3580b4d528dec10bbe5052cefa7de31e797b607017092e615ba3de8b35"
-SRC_URI[sha384sum] = "81e114ad448b9553e8c79ab17a09dcd36852f0be5efca77dc655b9eba215895f86fe644d5b0565d080d09233d04aac0d"
-SRC_URI[sha512sum] = "0780438803c63938a2dac247dab205d4954b2e87a3b6949df89ca721dedc2da02502335c96d82c2eaa6a244c0c0a6297471ca69bbd504876cd2c68308329f5a0"
+SRC_URI[md5sum] = "9909065535228ee68db27a0c9ad7ef09"
+SRC_URI[sha1sum] = "5d90c6c42d1a34f43680eb13a3fc049c9bc877db"
+SRC_URI[sha256sum] = "670dc40794e3ae39664e3c6ab19d443b4e86d349fc6634957397535f5c4ed944"
+SRC_URI[sha384sum] = "3de1fd315e13eb9f8cdea1f752ea39ae51f4e3512486449c2376c2061c39dd6524cb2c09d9373b5465967b28eb539ac9"
+SRC_URI[sha512sum] = "23dd1ef2fc29179b85364109335ad0fb60b27407aeff01a6c665624fe73ba163c85b1e0e74a5722c6d8585f3efd85511a34ebde8e3d79f7f2e536bd7c96b23b7"
 
 # NOTE: no Makefile found, unable to determine what needs to be done
 
