@@ -14,12 +14,19 @@ Agent contains Free Software components. Reference \
 HOMEPAGE = "http://www.teamviewer.com"
 SECTION = "non-free/misc"
 
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://../LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
-SRC_URI += "file://LICENSE;md5=42d92b6e835edaca7b91d7007b64e737"
+LICENSE_FLAGS = "commercial"
+LICENSE_FLAGS_DETAILS:${PN} = "For further details, see https://www.teamviewer.com/link/?url=418720" 
 
+LIC_FILES_CHKSUM = "file://../copyright;md5=098680d7bb2ef92ca3cec0b546683658;\
+	file://../Third_Party_License_IoT.txt;md5=d8029066642f39a3dcfa05a87651015c;"
+	
+SRC_URI += "file://copyright;md5=098680d7bb2ef92ca3cec0b546683658"
+SRC_URI += "file://Third_Party_License_IoT.txt;md5=d8029066642f39a3dcfa05a87651015c"
+
+LICENSE = "copyright & Third_Party_License_IoT.txt"
 
 RDEPENDS:${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'X11', ' xserver-xorg-xvfb xserver-xorg xkeyboard-config xauth', '', d)}"
+
 RDEPENDS:${PN} += "bash perl glibc glibc-utils procps curl ca-certificates"
 RRECOMMENDS:${PN} += "dbus libavahi-core libavahi-common libavahi-client"
 
